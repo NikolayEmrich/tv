@@ -3,8 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background: #141414;
+    background: linear-gradient(
+        135deg,
+        #000000 0%,
+        #000000 70%,
+        #000000 100%
+    );
+}
+
+body {
+  /*background: #710e0e;*/
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }

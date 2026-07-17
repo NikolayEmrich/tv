@@ -1,4 +1,4 @@
-document.querySelectorAll('.card').forEach(card => {
+/*document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', function(e) {
         e.preventDefault();
 
@@ -11,4 +11,4 @@ document.querySelectorAll('.card').forEach(card => {
             window.location.href = url;
         }
     });
-});
+});*/
