@@ -232,12 +232,13 @@ h2 {
     }
 
     .card img {
-        width: 100px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 10px;
-        flex-shrink: 0;
-    }
+    width: clamp(45px, 16vw, 80px);
+    aspect-ratio: 2 / 3;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
 
     .info {
         display: flex;
