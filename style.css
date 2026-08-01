@@ -265,9 +265,17 @@ h2 {
         color: #9e9e9e;
     }
 
-    .watched::before {
+    /*.watched::before {
         content: "✔";
         color: #4CAF50;
         font-size: 14px;
+    }*/
+
+    .icon-green {
+        color: #4CAF50;
+    }
+
+    .icon-gray {
+        color: #777;
     }
 }
