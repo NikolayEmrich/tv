@@ -97,3 +97,18 @@ input.addEventListener("keydown", e => {
     if (e.key === "Enter") okBtn.click();
     if (e.key === "Escape") cancelBtn.click();
 });
+
+const viewBtn = document.getElementById("viewToggle");
+const grid = document.querySelector(".grid");
+
+grid.classList.add("list-view");
+
+viewBtn.addEventListener("click", () => {
+    grid.classList.toggle("grid-view");
+    grid.classList.toggle("list-view");
+
+    viewBtn.innerHTML = grid.classList.contains("grid-view")
+    ? '<img src="icons/layout_grid_3.png" alt="Список">'
+    : '<img src="icons/layout_grid_2.png" alt="Сетка">';
+
+});
