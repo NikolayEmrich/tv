@@ -238,7 +238,7 @@ h2 {
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
-}
+    }
 
     .info {
         display: flex;
@@ -278,4 +278,31 @@ h2 {
     .icon-gray {
         color: #777;
     }
+}
+
+.filters {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 1px;
+}
+
+.filter {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #444;
+    color: white;
+}
+
+.filter.active {
+    background: #2f6794;
+}
 }

@@ -6,6 +6,32 @@ const cancelBtn = document.getElementById("cancelBtn");
 const errorModal = document.getElementById("errorModal");
 const errorButton = document.getElementById("errorButton");
 
+const filterButtons = document.querySelectorAll(".filter");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(b => b.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        document.querySelectorAll(".card").forEach(card => {
+            const watched = card.querySelector(".icon-green") !== null;
+
+            if (
+                filter === "all" ||
+                (filter === "watched" && watched) ||
+                (filter === "unwatched" && !watched)
+            ) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
 let currentCard = null;
 
 document.querySelectorAll(".card").forEach(card => {
