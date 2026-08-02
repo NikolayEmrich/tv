@@ -52,7 +52,7 @@ h2 {
 } /* Эффект при наведении мышкой */
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(192, 77, 218, 0.5);
+  box-shadow: 0 0 25px rgba(203, 202, 202, 0.5);
 }
 .card:visited {
   color: white;
@@ -271,12 +271,14 @@ h2 {
         font-size: 14px;
     }*/
 
-    .icon-green {
-        color: #4CAF50;
+    .icon-green::before {
+    content: "✔";
+    color: #4CAF50;
     }
 
-    .icon-gray {
-        color: #777;
+    .icon-gray::before {
+    content: "✔";
+    color: #777;
     }
 }
 
