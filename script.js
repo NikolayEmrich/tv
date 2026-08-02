@@ -101,7 +101,9 @@ input.addEventListener("keydown", e => {
 const viewBtn = document.getElementById("viewToggle");
 const grid = document.querySelector(".grid");
 
-grid.classList.add("list-view");
+if (window.innerWidth <= 600) {
+    grid.classList.add("list-view");
+}
 
 viewBtn.addEventListener("click", () => {
     grid.classList.toggle("grid-view");
