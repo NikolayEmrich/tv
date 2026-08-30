@@ -114,3 +114,27 @@ viewBtn.addEventListener("click", () => {
     : '<img src="icons/layout_grid_2.png" alt="Сетка">';
 
 });
+
+// Добавление зеленой галочки, если просмотрен
+document.querySelectorAll('.card').forEach(card => {
+
+    if (card.querySelector('.icon-green')) {
+
+        const image = card.querySelector(':scope > img');
+
+        if (!image) return;
+
+        const poster = document.createElement('div');
+        poster.className = 'poster';
+
+        image.parentNode.insertBefore(poster, image);
+        poster.appendChild(image);
+
+        const check = document.createElement('img');
+        check.src = 'icons/green_check.png';
+        check.className = 'watched-check';
+        check.alt = 'Просмотрен';
+
+        poster.appendChild(check);
+    }
+});

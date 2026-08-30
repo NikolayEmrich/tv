@@ -398,3 +398,29 @@ h2 {
 }
 
 }
+
+/*For GREEN FILMS*/
+.poster {
+    position: relative;
+}
+
+.watched-check {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px !important;
+    height: 32px !important;
+    padding: 2px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.765);
+    border-radius: 50%;
+    object-fit: contain;
+    z-index: 10;
+}
+
+/* Скрываем галочку на экранах меньше 600px */
+@media (max-width: 600px) {
+    .watched-check {
+        display: none;
+    }
+}
